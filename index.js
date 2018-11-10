@@ -9,7 +9,7 @@ var ParseServer = require('parse-server').ParseServer;
 var ParseDashboard = require('parse-dashboard');
 
 var parseServerConfig = {
-  databaseURI: process.env.PARSE_DATABASE_URI || 'mongodb://localhost:27017/dev',
+  databaseURI: process.env.PARSE_DATABASE_URI || 'mongodb://localhost:27017/dev', // Don't forget to add ?authSource=admin when using admin
   masterKey: process.env.PARSE_MASTER_KEY || '', // Keep it secret!
   serverURL: process.env.PARSE_SERVER_URL || 'http://localhost:8080/parse',  // Don't forget to change to https if needed
   appId: process.env.PARSE_APP_ID || 'myAppId',
